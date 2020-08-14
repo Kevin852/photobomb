@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<title>Home Page</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="ic.jpg" sizes="16x16" type="image/jpg">
+<link rel="stylesheet" href="../www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+<link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<style>
+body {font-family: Abel;
+       font-size:20px;}
+	   
+	   p{font-family: Abel;
+	   font-color: #000000;}
+	   
+.w3-bar  {
+padding:10px}
+
+
+footer img
+{
+width:22px;
+height:22px;}
+
+
+
+.MyHeaderControl{ 
+  height: calc(100vh - 56px);
+  width: 100%;
+  background-image:url("img/12.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; 
+    -webkit-background-size: cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+}
+.MyHeaderControl.content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0); /* Black background with 0.5 opacity */
+  color: #000000;
+  width: 100%;
+  padding: 20px;
+}
+h1{
+font-size: 5rem;
+font-weight: bolder;
+color: #382237;
+}
+</style>
+
+
+<body>
+
+<!-- Top menu -->
+<!-- Navbar (sit on top) -->
+ <div class="w3-bar w3-white w3-card-2" id="myNavbar">
+    <a href="index.html" class="w3-bar-item w3-button w3-wide"><b>PHOTOBOMB</b></a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small" style="font-size:14px;letter-spacing:1px;">
+      <a href="Film%20Page/film.html" class="w3-bar-item w3-button">FILM</a>
+      <a href="Photo%20Page/Photo.html" class="w3-bar-item w3-button">PHOTO</a>
+      <a href="About%20Page/About.html" class="w3-bar-item w3-button"> ABOUT</a>
+      <a href="Contact%20Page/contact.html" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+
+  
+<!-- !PAGE CONTENT! -->
+
+<div class="MyHeaderControl">
+<div class="content" style="width:100%;padding-top:125px;padding-left:550px;">
+    <h1>CLICK.</h1>
+	<h1>CAPTURE.</h1>
+	<h1>CREATE.</h1>   
+  </div>
+</div>
+
+
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-16  w3-center  "  style="margin-top:5px"> 
+
+
+
+<a href="https://www.instagram.com/"><img onmouseover="this.src='instagramc.png'" onmouseout="this.src='instagram.png'" alt="Instagram" src="instagram.png" style="margin-right:4px;"/></a>
+
+
+<a href="https://www.facebook.com/"><img onmouseover="this.src='facebookc.png'" onmouseout="this.src='facebook.png'" alt="Facebook" src="facebook.png" style="margin-right:4px;" /></a>
+
+
+<a href="http://www.imdb.com/"><img onmouseover="this.src='imdbc.png'" onmouseout="this.src='imdb.png'" alt="IMDb" src="imdb.png" style="margin-right:4px;"/></a>
+
+
+<a href="https://vimeo.com/"><img onmouseover="this.src='vimeoc.png'" onmouseout="this.src='vimeo.png'" src="vimeo.png" style="margin-right:4px;"/></a>
+
+<a href="mailto:abc@gmail.com"><img onmouseover="this.src='emailc.png'" onmouseout="this.src='email.png'" src="email.png" style="margin-right:4px;" /></a>
+
+
+ 
+  <p style="font-size:16px;color:#B0B0B0;letter-spacing:0.2px"> &copy;2020 PHOTOBOMB </span></p>
+</footer>
+
+
+
+
+
+
+
+<script> 
+
+if (document.all||document.getElementById){
+document.write('<style id="tmpStyle" type="text/css">#pic {-moz-opacity:0.00;filter:alpha(opacity=0);opacity:0;-khtml-opacity:0;}<\/style>')
+var objG, degree=fadeAssist=0;
+if (document.all&&typeof document.documentElement!=='undefined')
+document.write('<!--[if GTE IE 5]><script type="text/javascript">fadeAssist=function (obj, degree){try {obj.filters.alpha.opacity=degree}catch(e){obj.style.filter="alpha(opacity="+degree+")"}}<'+'\/'+'script><![endif]-->')
+
+}
+function fadepic(obj){
+objG=obj
+if (!document.getElementById&&!document.all)
+return;
+var tS=document.all? document.all['tmpStyle'] : document.getElementById('tmpStyle')
+if (degree<100){
+degree+=5
+if (objG.filters&&objG.filters[0]&&fadeAssist)
+fadeAssist(objG, degree)
+else if (typeof objG.style.MozOpacity=='string')
+objG.style.MozOpacity=degree/101
+else if (typeof objG.style.KhtmlOpacity=='string')
+objG.style.KhtmlOpacity=degree/100
+else if (typeof objG.style.opacity=='string'&&!objG.filters)
+objG.style.opacity=degree/101
+else
+tS.disabled=true
+setTimeout("fadepic(objG)", 50)
+}
+else
+tS.disabled=true
+}
+</script>
+
+
+
+
+</body>
+
+</html>

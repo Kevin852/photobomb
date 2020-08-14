@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<title>Home Page</title>
+
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="ic.jpg" sizes="16x16" type="image/jpg">
+<link rel="stylesheet" href="../www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+<link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Abel;
+       font-size:20px;}
+	   
+	   p{font-family: Abel;}
+	   
+.w3-bar  {
+padding:10px}
+
+
+.video {
+    float: none;
+    clear: both;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+}
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.footer p {
+letter-spacing:0.6px;
+}
+footer img
+{
+width:22px;
+height:22px;}
+
+</style>
+
+
+<body>
+
+<!-- Top menu -->
+<!-- Navbar (sit on top) -->
+ <div class="w3-bar w3-white w3-card-2" id="myNavbar">
+    <a href="index.html" class="w3-bar-item w3-button w3-wide"><b>PHOTOBOMB</b></a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small" style="font-size:14px;letter-spacing:1px;">
+      <a href="Film%20Page/film.html" class="w3-bar-item w3-button">FILM</a>
+      <a href="Photo%20Page/Photo.html" class="w3-bar-item w3-button">PHOTO</a>
+      <a href="About%20Page/About.html" class="w3-bar-item w3-button"> ABOUT</a>
+      <a href="Contact%20Page/contact.html" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card-2 w3-animate-left w3-hide-medium w3-hide-large" style="display:none;font-size:14px;letter-spacing:1px;"id="mySidebar">
+  <a href="Film%20Page/film.html" onclick="w3_close()" class="w3-bar-item w3-button">FILM</a>
+  <a href="Photo%20Page/Photo.html" onclick="w3_close()" class="w3-bar-item w3-button">PHOTO</a>
+  <a href="About%20Page/About.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="Contact%20Page/contact.html" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+
+  
+<!-- !PAGE CONTENT! -->
+
+<div class="w3-main w3-content" style="max-width:850px;margin-top:35px">
+
+ <div class="video">
+    
+ <iframe src="https://player.vimeo.com/video/189072941?portrait=0" width="1000" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-16  w3-center  "  style="margin-top:65px"> 
+
+
+
+<a href="https://www.instagram.com/"><img onmouseover="this.src='instagramc.png'" onmouseout="this.src='instagram.png'" alt="Instagram" src="instagram.png" style="margin-right:4px;"/></a>
+
+
+<a href="https://www.facebook.com/"><img onmouseover="this.src='facebookc.png'" onmouseout="this.src='facebook.png'" alt="Facebook" src="facebook.png" style="margin-right:4px;" /></a>
+
+
+<a href="http://www.imdb.com/"><img onmouseover="this.src='imdbc.png'" onmouseout="this.src='imdb.png'" alt="IMDb" src="imdb.png" style="margin-right:4px;"/></a>
+
+
+<a href="https://vimeo.com/"><img onmouseover="this.src='vimeoc.png'" onmouseout="this.src='vimeo.png'" src="vimeo.png" style="margin-right:4px;"/></a>
+
+<a href="mailto:abc@gmail.com"><img onmouseover="this.src='emailc.png'" onmouseout="this.src='email.png'" src="email.png" style="margin-right:4px;" /></a>
+
+
+ 
+  <p style="font-size:16px;color:#B0B0B0;letter-spacing:0.2px"> &copy;2020 PHOTOBOMB </span></p>
+</footer>
+
+
+
+
+
+<script> 
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+    } else {
+        mySidebar.style.display = 'block';
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+
+
+
+
+</body>
+
+</html>

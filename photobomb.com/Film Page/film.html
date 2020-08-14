@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<title>Film Page</title>
+
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../ic.jpg" sizes="16x16" type="image/jpg">
+<link rel="stylesheet" href="../../www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300">
+<link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<style>
+
+body {font-family: Abel;
+      
+       font-size:20px;}
+p{
+font-size: 16px;
+}
+.footer p {
+letter-spacing:0.6px;
+}
+
+.w3-bar  {
+padding:10px}
+
+footer img
+{	
+width:22px;
+height:22px;}
+
+
+
+img{
+max-width:100%;
+max-height:100%;}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fade-in.one {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.fade-in.two {
+  -webkit-animation-delay: 1.0s;
+  -moz-animation-delay: 1.0s;
+  animation-delay: 1.0s;
+}
+
+.fade-in.three {
+  -webkit-animation-delay: 1.3s;
+  -moz-animation-delay: 1.3s;
+  animation-delay: 1.3s;
+}
+
+/*---make a basic box ---*/
+.box{
+
+  position: relative;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+.container:hover .play{display:block}
+.play{
+  position : absolute;
+    display:none;
+    top:-10px; 
+    width:40px;
+    margin:0 auto; 
+    left:0px;
+    right:100px;
+    z-index:100
+}
+button{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+</style>
+
+<body>
+
+<!-- Top menu -->
+<!-- Navbar (sit on top) -->
+ <div class="w3-bar w3-white w3-card-2" id="myNavbar">
+    <a href="../index.html" class="w3-bar-item w3-button w3-wide"><b>PHOTOBOMB</b></a>
+    <!-- Right-sided navbar links -->
+     <div class="w3-right w3-hide-small" style="font-size:14px;letter-spacing:1px;">
+      <a href="film.html" class="w3-bar-item w3-button">FILM</a>
+      <a href="../Photo%20Page/Photo.html" class="w3-bar-item w3-button">PHOTO</a>
+      <a href="../About%20Page/About.html" class="w3-bar-item w3-button"> ABOUT</a>
+      <a href="../Contact%20Page/contact.html" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card-2 w3-animate-left w3-hide-medium w3-hide-large" style="display:none;font-size:14px;letter-spacing:1px;"id="mySidebar">
+  <a href="film.html" onclick="w3_close()" class="w3-bar-item w3-button">FILM</a>
+  <a href="../Photo%20Page/Photo.html" onclick="w3_close()" class="w3-bar-item w3-button">PHOTO</a>
+  <a href="../About%20Page/About.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="../Contact%20Page/contact.html" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+
+
+
+
+<!-- Page content -->
+<div class="w3-content w3-padding-36" style="max-width:100%">
+
+  <!-- Project Section -->
+  <div class="w3-container" id="projects">
+    
+
+
+  <div class="w3-row-padding ">
+    <div class="w3-col l4 m4 w3-margin-bottom">
+      <div class="w3-display-container" style="max-width:100%">
+        <div class="box fade-in one">
+		<div class="container">
+        <a class="image" onclick="changeVideo('https://player.vimeo.com/video/189072941?portrait=0')" ><img src="images/06.jpg" alt="House" ></a>
+		 <div class="middle">
+			<div class="play">
+				<a onclick="changeVideo('https://player.vimeo.com/video/189072941?portrait=0')">
+					<img src="images/play.png"/>
+				</a>
+			</div>
+		</div>
+		</div>
+		</div>
+      </div>
+    </div>
+	
+	<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+      
+        <iframe id="iframeYoutube" width="560" height="315"  src="https://player.vimeo.com/video/189072941?portrait=0" frameborder="0" allowfullscreen></iframe> 
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+	
+    <div class="w3-col l4 m4 w3-margin-bottom">
+      <div class="w3-display-container" style="max-width:100%">
+      <div class="box fade-in two">
+<div class="container">
+        <a class="image" onclick="changeVideo('https://player.vimeo.com/video/96388726?portrait=0')" ><img src="images/02.jpg" alt="House" ></a>
+		 <div class="middle">
+			<div class="play">
+				<a onclick="changeVideo('https://player.vimeo.com/video/96388726?portrait=0')">
+					<img src="images/play.png"/>
+				</a>
+			</div>
+		</div>
+		</div>      
+		</div>
+	  </div>
+    </div>
+	
+		<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+      
+        <iframe id="iframeYoutube" width="560" height="315"  src="https://player.vimeo.com/video/96388726?portrait=0" frameborder="0" allowfullscreen></iframe> 
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+	
+    <div class="w3-col l4 m4 w3-margin-bottom">
+      <div class="w3-display-container">
+         <div class="box fade-in three">
+         <div class="container">
+        <a class="image" onclick="changeVideo('https://youtube.com/embed/-zM-8CGM3Zc')" ><img src="images/03.jpg" alt="House" ></a>
+		 <div class="middle">
+			<div class="play">
+				<a onclick="changeVideo('https://youtube.com/embed/-zM-8CGM3Zc')">
+					<img src="images/play.png"/>
+				</a>
+			</div>
+		</div>
+		</div>
+		</div>
+	  </div>
+    </div>
+			<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+      
+        <iframe id="iframeYoutube" width="560" height="315"  src="https://youtube.com/embed/nk4NV9ITMLs" frameborder="0" allowfullscreen></iframe> 
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+	</div>
+    
+  <div class="w3-row-padding ">
+    <div class="w3-col l4 m4 w3-margin-bottom">
+      <div class="w3-display-container" style="max-width:100%">
+        <div class="box fade-in one">
+		<div class="container">
+        <a class="image" onclick="changeVideo('https://youtube.com/embed/nk4NV9ITMLs')" ><img src="images/04.jpg" alt="House" ></a>
+		 <div class="middle">
+			<div class="play">
+				<a onclick="changeVideo('https://youtube.com/embed/nk4NV9ITMLs')">
+					<img src="images/play.png"/>
+				</a>
+			</div>
+		</div>
+		</div>
+		</div>
+      </div>
+    </div>
+	
+		<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+      
+        <iframe id="iframeYoutube" width="560" height="315"  src="https://youtube.com/embed/nk4NV9ITMLs" frameborder="0" allowfullscreen></iframe> 
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="w3-col l4 m4 w3-margin-bottom">
+      <div class="w3-display-container" style="max-width:100%">
+		 <div class="box fade-in two">
+		 <div class="container">
+        <a class="image" onclick="changeVideo('https://www.youtube.com/embed/2oZOOKFTKpE')" ><img src="images/08.jpg" height="310" alt="House" ></a>
+		 <div class="middle">
+			<div class="play">
+				<a onclick="changeVideo('https://www.youtube.com/embed/2oZOOKFTKpE')">
+					<img src="images/play.png"/>
+				</a>
+			</div>
+		</div>
+		</div>
+      </div>
+	  </div>
+    </div>
+		
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+      
+        <iframe id="iframeYoutube" width="560" height="315"  src="https://www.youtube.com/embed/2oZOOKFTKpE" frameborder="0" allowfullscreen></iframe> 
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div> 
+<div class="w3-col l4 m4 w3-margin-bottom">
+      <div class="w3-display-container" style="max-width:100%">
+		 <div class="box fade-in three">
+		 <div class="container">
+        <a class="image" onclick="changeVideo('https://www.youtube.com/embed/J2mqIgdae5I')" ><img src="images/07.jpg" height="310" alt="House" ></a>
+		 <div class="middle">
+			<div class="play">
+				<a onclick="changeVideo('https://www.youtube.com/embed/J2mqIgdae5I')">
+					<img src="images/play.png"/>
+				</a>
+			</div>
+		</div>
+		</div>
+      </div>
+	  </div>
+    </div>
+		
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+      
+        <iframe id="iframeYoutube" width="560" height="315"  src="https://www.youtube.com/embed/J2mqIgdae5I" frameborder="0" allowfullscreen></iframe> 
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div> 
+
+<!-- Footer -->
+
+<footer class="w3-container w3-padding-16  w3-center  "  style="margin-top:65px"> 
+
+<a href="https://www.instagram.com/"><img onmouseover="this.src='../instagramc.png'" onmouseout="this.src='../instagram.png'" alt="Instagram" src="../instagram.png" style="margin-right:4px;"/></a>
+
+
+<a href="https://www.facebook.com/"><img onmouseover="this.src='../facebookc.png'" onmouseout="this.src='../facebook.png'" alt="Facebook" src="../facebook.png" style="margin-right:4px;" /></a>
+
+
+<a href="http://www.imdb.com/"><img onmouseover="this.src='../imdbc.png'" onmouseout="this.src='../imdb.png'" alt="IMDb" src="../imdb.png" style="margin-right:4px;"/></a>
+
+
+<a href="https://vimeo.com/"><img onmouseover="this.src='../vimeoc.png'" onmouseout="this.src='../vimeo.png'" src="../vimeo.png" style="margin-right:4px;"/></a>
+
+<a href="mailto:abc@gmail.com"><img onmouseover="this.src='../emailc.png'" onmouseout="this.src='../email.png'" src="../email.png" style="margin-right:4px;" /></a>
+
+  <p style="font-size:16px;color:#B0B0B0;letter-spacing:0.2px"> &copy;2020 PHOTOBOMB </span></p>
+</footer>
+
+<script> 
+
+$(document).ready(function(){
+  $("#myModal").on("hidden.bs.modal",function(){
+    $("#iframeYoutube").attr("src","#");
+  })
+})
+
+function changeVideo(vId){
+  var iframe=document.getElementById("iframeYoutube");
+  iframe.src=vId;
+
+  $("#myModal").modal("show");
+}
+
+</script>
+  
+
+ 
+
+
+</body>
+
+</html>

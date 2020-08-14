@@ -1,0 +1,28 @@
+<?xml version = "1.0"?> 
+<?xml-stylesheet type = "text/xsl" href="portfolio.xsl"?> 
+<Portfolio> 
+   <photos> 
+      <name>Sand</name> 
+      <location>Rajasthan</location> 
+   </photos> 
+   <photos> 
+      <name>Street sign</name> 
+      <location>Mumbai</location> 
+   </photos> 
+   <photos> 
+     <name>Sky</name> 
+      <location>Texas</location> 
+   </photos>
+   <photos> 
+     <name>Skyline</name> 
+      <location>New York</location> 
+   </photos>
+	<photos> 
+     <name>Dance</name> 
+      <location>Tamil Nadu</location> 
+   </photos>
+      <photos> 
+     <name>Home</name> 
+      <location>Mumbai</location> 
+   </photos>
+</Portfolio>

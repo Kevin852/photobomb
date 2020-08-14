@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<HEAD>
+<TITLE>About Me</TITLE>
+<SCRIPT language = "javascript">
+	var XMLHttpRequestObj = false;
+	if (window.XMLHttpRequest) 
+	{
+		XMLHttpRequestObj = new XMLHttpRequest();
+	}
+	else if (window.ActiveXObject) 
+	{
+		XMLHttpRequestObj = new
+		ActiveXObject("Microsoft.XMLHTTP");
+	}
+	function loadXMLDoc(dataSource, divID)
+	{
+		if(XMLHttpRequestObj) 
+		{
+			var obj = document.getElementById(divID);
+			XMLHttpRequestObj.open("GET", dataSource);
+
+			XMLHttpRequestObj.onreadystatechange = function()
+			{
+				if (XMLHttpRequestObj.readyState == 4 &&
+				 XMLHttpRequestObj.status == 200) 
+				{
+					obj.innerHTML =
+					XMLHttpRequestObj.responseText;
+				}
+			}
+			XMLHttpRequestObj.send();
+		}
+	}
+</SCRIPT>
+</HEAD> 
+<BODY>
+<img src="img/01.jpg" style="margin-top:50px;margin-left:100px;" height=200 width=200/>
+<br>
+<DIV id="myDiv" style="margin-top:50px;margin-left:100px;"><H2>Click to know about me!!</H2></DIV><br>
+<BUTTON type="button" onclick="this.style.visibility='hidden'; loadXMLDoc('msg.xml','myDiv')">Click Me</BUTTON>
+</BODY>
+</HTML>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<title>Contact</title>
+
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../ic.jpg" sizes="16x16" type="image/jpg">
+<link rel="stylesheet" href="../../www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+<link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+body {font-family: Abel;
+       font-size:20px;}
+	   
+	   p{font-family: Abel;}
+
+h2{
+font-family: Abel;
+font-size: 30px;
+color:white;
+}
+
+.footer p {
+letter-spacing:0.6px;
+}
+
+.w3-bar  {
+padding:10px}
+
+footer img
+{
+width:22px;
+height:22px;}
+
+a:link {
+    text-decoration: none;
+}
+
+
+
+
+</style>
+
+  
+ 
+
+  <!-- responsive-full-background-image.css stylesheet contains the code you want -->
+  <link rel="stylesheet" href="responsive-full-background-image.css">
+  
+  <!-- Not required: jquery.min.js and presentational-only.js is only used to demonstrate scrolling behavior of the viewport  -->
+  <script src="../../ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="presentational-only/presentational-only.js"></script>
+  
+  
+
+<body>
+
+<!-- Top menu -->
+<!-- Navbar (sit on top) -->
+
+   <div class="w3-bar w3-white w3-card-2" id="myNavbar">
+    <a href="../index.html" class="w3-bar-item w3-button w3-wide"><b>PHOTOBOMB</b></a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small" style="font-size:14px;letter-spacing:1px;">
+      <a href="../Film%20Page/film.html" class="w3-bar-item w3-button">FILM</a>
+      <a href="../Photo%20Page/Photo.html" class="w3-bar-item w3-button">PHOTO</a>
+      <a href="../About%20Page/About.html" class="w3-bar-item w3-button"> ABOUT</a>
+      <a href="contact.html" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card-2 w3-animate-left w3-hide-medium w3-hide-large" style="display:none;font-size:14px;letter-spacing:1px;"id="mySidebar">
+  <a href="../Film%20Page/film.html" onclick="w3_close()" class="w3-bar-item w3-button">FILM</a>
+  <a href="../Photo%20Page/Photo.html" onclick="w3_close()" class="w3-bar-item w3-button">PHOTO</a>
+  <a href="../About%20Page/About.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+
+
+  
+<!-- Page content -->
+<div class="w3-content" style="max-width:100%;margin-top:40px;">
+
+   <!-- Contact Section -->
+   <!-- The Contact Section -->
+  <div class="w3-container w3-content w3-padding-16" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-center " >CONTACT</h2>
+    <p class="w3-opacity w3-center" style="color:white;"><i><b>Fan? Drop a note!</b></i></p>
+    <div class="w3-row w3-padding-48">
+      <div class="w3-col m6 w3-large w3-margin-bottom" style="color:white;">
+        <i class="fa fa-map-marker" style="width:30px;color:white"></i>Mumbai,India<br>
+        <i class="fa fa-envelope" style="width:25px;color:white"> </i><a href="mailto:abc@gmail.com"> Email: photobomb@gmail.com</a><br>
+		<i class="fa fa-globe" style="width:30px;color:white"></i><a href="../index.html">photobomb.com</a>
+      </div>
+      <div class="w3-col m6">
+        <form onsubmit='return formValidation()'>
+  <div class="form-group row">
+    <label class="col-sm-4 col-form-label" style="color:white">Email</label>
+    <div class="col-sm-8">
+      <input type="email" class="form-control" id="email1" placeholder="Email">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label  class="col-sm-4 col-form-label" style="color:white">Feedback</label>
+    <div class="col-sm-8">
+      <input type="textarea" class="form-control" id="feedback" placeholder="Feedback">
+    </div>
+  </div>
+    <div class="row">
+      <h5 class="col-form-label col-sm-5 pt-0" style="color:white">Are you a phtographer/video blogger?</h5>
+      <div class="col-sm-7">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+          <label class="form-check-label" for="gridRadios1" style="color:white">
+            Beginer
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+          <label class="form-check-label" for="gridRadios2" style="color:white">
+            Amateur
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+          <label class="form-check-label" for="gridRadios3" style="color:white">
+            Pro
+          </label>
+        </div>
+		
+      </div>
+    </div>
+  <div class="form-group row" id="check">
+    <div class="col-sm-4" style="color:white">Your interests?</div>
+    <div class="col-sm-8">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="check1">
+        <label class="form-check-label" for="gridCheck1" style="color:white">
+          Photography
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="check2">
+        <label class="form-check-label" for="gridCheck2" style="color:white">
+          Videography
+        </label>
+      </div>
+	  </div>
+  </div>
+  <div class="form-group row" padding-top="25px">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary" >Submit</button>
+    </div>
+  </div>
+</form>
+      </div>
+    </div>
+  </div>
+  
+  
+<!-- Footer -->
+ 
+<footer class="w3-container w3-padding-24  w3-center  "  style="margin-top:200px;background-color:white;background-size:cover;"> 
+
+
+
+
+<a href="https://www.instagram.com/"><img onmouseover="this.src='../instagramc.png'" onmouseout="this.src='../instagram.png'" alt="Instagram" src="../instagram.png" style="margin-right:4px;"/></a>
+
+
+<a href="https://www.facebook.com/"><img onmouseover="this.src='../facebookc.png'" onmouseout="this.src='../facebook.png'" alt="Facebook" src="../facebook.png" style="margin-right:4px;" /></a>
+
+
+<a href="http://www.imdb.com/"><img onmouseover="this.src='../imdbc.png'" onmouseout="this.src='../imdb.png'" alt="IMDb" src="../imdb.png" style="margin-right:4px;"/></a>
+
+
+<a href="https://vimeo.com/"><img onmouseover="this.src='../vimeoc.png'" onmouseout="this.src='../vimeo.png'" src="../vimeo.png" style="margin-right:4px;"/></a>
+
+<a href="mailto:abc@gmail.com"><img onmouseover="this.src='../emailc.png'" onmouseout="this.src='../email.png'" src="../email.png" style="margin-right:4px;" /></a> 
+  <p style="font-size:16px;color:#B0B0B0;letter-spacing:0.2px"> &copy;2020 PHOTOBOMB  </span></p>
+</footer>
+
+
+<script> 
+function formValidation() {
+
+var feedback = $("#feedback").val();
+var email1 = $("#email1").val();
+var checkbox = document.getElementById("check1");
+var checkbox1 = document.getElementById("check2");
+
+if ((email1.length == 0) && feedback.length == 0) {
+alert("Email ID and Feedback are mandatory");
+
+return false;
+}
+
+if (email1.length == 0) {
+alert("Email is mandatory");
+return false;
+}
+
+if (feedback.length == 0) {
+alert("Feedback is mandatory");
+return false;
+}
+
+if ((checkbox.checked==true && checkbox1.checked==false) || (checkbox.checked==false && checkbox1.checked==true) || (checkbox.checked==true && checkbox1.checked==true)){
+}
+else{
+    alert("Checkbox is UNCHECKED.");
+}
+	
+
+
+if (inputAlphabet(feedback, "* For your name please use alphabets only *")) {
+if (emailValidation(email1, "* Please enter a valid email address *")) {
+
+return true;
+}
+}
+return false;
+myFunction();
+}
+
+function emailValidation(inputtext, alertMsg) {
+var emailExp = /^([a-zA-Z0-9.+]+)@([a-zA-Z0-9.-]+).[a-zA-z]d{2,4}$/;
+if (inputtext.value.match(emailExp)) {
+return true;
+} else {
+alert("Enter valid Email ID");
+return false;
+}
+}
+
+function inputAlphabet(inputtext, alertMsg) {
+var alphaExp = /^[a-zA-Z]+$/;
+if (inputtext.match(alphaExp)) {
+return true;
+} else {
+alert("Feedback cannot contain numbers.");
+return false;
+}
+}
+
+</script>
+
+</body>
+</html>

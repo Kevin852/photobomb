@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<title>About Page</title>
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../ic.jpg" sizes="16x16" type="image/jpg">
+<link rel="stylesheet" href="../../www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300">
+<link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Abel;
+       font-size:20px;}
+	   
+	   p{font-family: Abel;
+	   font-size: 16px;}
+
+	   h1{font-family: Abel;
+}
+
+footer img
+{
+width:22px;
+height:22px;}
+
+.w3-bar  {
+padding:10px}
+
+@media screen and (max-width: 734px) {
+section {
+  margin-top:-190px;
+
+}
+
+img{
+max-width:100%;
+max-height:100%;}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fade-in.one {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+/*---make a basic box ---*/
+.box{
+
+  position: relative;
+}
+
+
+</style>
+
+
+<body onload="loadXMLDoc('msg.xml','myDiv')">
+
+<!-- Top menu -->
+<!-- Navbar (sit on top) -->
+  <div class="w3-bar w3-white w3-card-2"  id="myNavbar">
+    <a href="../index.html" class="w3-bar-item w3-button w3-wide"><b>PHOTOBOMB</b></a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small" style="font-size:14px;letter-spacing:1px;">
+      <a href="../Film%20Page/film.html" class="w3-bar-item w3-button">FILM</a>
+      <a href="../Photo%20Page/Photo.html" class="w3-bar-item w3-button">PHOTO</a>
+      <a href="About.html" class="w3-bar-item w3-button"> ABOUT</a>
+      <a href="../Contact%20Page/contact.html" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card-2 w3-animate-left w3-hide-medium w3-hide-large" style="display:none;font-size:14px;letter-spacing:1px;"id="mySidebar">
+  <a href="../Film%20Page/film.html" onclick="w3_close()" class="w3-bar-item w3-button">FILM</a>
+  <a href="../Photo%20Page/Photo.html" onclick="w3_close()" class="w3-bar-item w3-button">PHOTO</a>
+  <a href="About.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="../Contact%20Page/contact.html" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+
+  
+<div class="w3-main w3-content w3-padding" style="max-width:1000px">
+
+  <!-- About Section -->
+<div class="box fade-in one">
+  <div class="w3-row w3-padding-bottom-48 " id="about">
+    <div class="w3-col m6 w3-padding-large  w3-display-container" width="600" height="1200" style="margin-top:190px">
+	<section>
+		<img src="img/01.jpg" class="w3-round-xlarge w3-image " alt="Table Setting">
+	</section>
+	</div>
+
+    <div class="w3-col m6 w3-padding-large s">
+	<div class="w3-container w3-center w3-animate-opacity">
+
+      <h1 class="w3-center">Photobomber's Statement</h1><br>
+    
+ <p>Photography is the whole world full of adventures, interesting events, stories, games of colors and light. As one of the most interesting and exciting forms of art, it appeared a long time ago, and to this time has been greatly influencing the human life. In the 19th century, for example, the adherents of positivism believed that photography is a science that allows to record reality. Photography, both art and science, has constantly been improved by different artists, inventors, scientists, and engineers.In addition to representing reality, photography is also important in other areas of human life. For example, in the world of commerce, a photograph can play a key role in influencing consumers or clients or forming the reputation of a particular brand or company. Photographs have a huge emotional impact on people, making them experience particular sort of emotion, so that they have a certain desire to buy something, go somewhere, or look in a certain way.</p>
+
+<p><i>Looking forward to working with you all.</i> </p>
+    </div>
+  </div>
+  </div>
+ </div> 
+  </div>
+<!-- Footer -->
+<footer class="w3-container w3-padding-16  w3-center  "  style="margin-top:65px"> 
+
+
+
+
+<a href="https://www.instagram.com/"><img onmouseover="this.src='../instagramc.png'" onmouseout="this.src='../instagram.png'" alt="Instagram" src="../instagram.png" style="margin-right:4px;"/></a>
+
+
+<a href="https://www.facebook.com/"><img onmouseover="this.src='../facebookc.png'" onmouseout="this.src='../facebook.png'" alt="Facebook" src="../facebook.png" style="margin-right:4px;" /></a>
+
+
+<a href="http://www.imdb.com/"><img onmouseover="this.src='../imdbc.png'" onmouseout="this.src='../imdb.png'" alt="IMDb" src="../imdb.png" style="margin-right:4px;"/></a>
+
+
+<a href="https://vimeo.com/"><img onmouseover="this.src='../vimeoc.png'" onmouseout="this.src='../vimeo.png'" src="../vimeo.png" style="margin-right:4px;"/></a>
+
+<a href="mailto:abc@gmail.com"><img onmouseover="this.src='../emailc.png'" onmouseout="this.src='../email.png'" src="../email.png" style="margin-right:4px;" /></a> 
+  
+ <p style="font-size:16px;color:#B0B0B0;letter-spacing:0.2px;font-family:Abel;"> &copy;2020 PHOTOBOMB </span></p>
+</footer>
+
+<script> 
+	var XMLHttpRequestObj = false;
+	if (window.XMLHttpRequest) 
+	{
+		XMLHttpRequestObj = new XMLHttpRequest();
+	}
+	else if (window.ActiveXObject) 
+	{
+		XMLHttpRequestObj = new
+		ActiveXObject("Microsoft.XMLHTTP");
+	}
+	function loadXMLDoc(dataSource, divID)
+	{
+		if(XMLHttpRequestObj) 
+		{
+			var obj = document.getElementById(divID);
+			XMLHttpRequestObj.open("GET", dataSource);
+
+			XMLHttpRequestObj.onreadystatechange = function()
+			{
+				if (XMLHttpRequestObj.readyState == 4 &&
+				 XMLHttpRequestObj.status == 200) 
+				{
+					obj.innerHTML =
+					XMLHttpRequestObj.responseText;
+				}
+			}
+			XMLHttpRequestObj.send();
+		}
+	}
+</script>
+
+
+
+
+</body>
+
+</html>
