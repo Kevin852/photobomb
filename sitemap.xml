@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
+<url>
+  <loc>https://photobombs.vercel.app/</loc>
+  <lastmod>2020-10-07T08:13:27+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://photobombs.vercel.app/index.html</loc>
+  <lastmod>2020-10-07T08:13:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://photobombs.vercel.app/Film%20Page/film.html</loc>
+  <lastmod>2020-10-07T08:13:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://photobombs.vercel.app/Photo%20Page/Photo.html</loc>
+  <lastmod>2020-10-07T08:13:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://photobombs.vercel.app/About%20Page/About.html</loc>
+  <lastmod>2020-10-07T08:13:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://photobombs.vercel.app/Film%20Page/film.html</loc>
+  <lastmod>2020-10-07T08:13:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
